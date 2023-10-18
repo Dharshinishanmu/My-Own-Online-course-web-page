@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Spot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .course-item {
+            flex-basis: calc(33.33% - 20px);
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            transition: transform 0.2s;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .course-detail {
+            margin-top: 20px;
+        }
+
+        .course-detail h2 {
+            font-size: 24px;
+        }
+
+        .course-detail p {
+            margin-top: 10px;
+        }
+
+        .menu {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .contact {
+            padding: 20px;
+        }
+
+        .about {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Tech Spot</h1>
+        <p>Welcome to our online courses!</p>
+    </header>
+    <div class="menu">
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <p>We are an online course platform dedicated to providing high-quality educational content to our users.</p>
+        </div>
+    </div>
+    <div class="container" id="courses">
+        <h2>Available Courses</h2>
+        <div class="course">
+            <div class="course-item">
+                <h3>Cyber Security</h3>
+                <p>This cybersecurity course provides a deep dive into the field of information 
+                   security. Students will learn about network security, ethical hacking, threat 
+                   detection, and incident response..</p>
+                <a href="cyber.html" class="btn btn-primary">Enroll</a>
+            </div>
+            <div class="course-item">
+                <h3>Data Science</h3>
+                <p>This data science course offers a comprehensive curriculum in data analysis, 
+                   machine learning, and statistical modeling.</p>
+                <a href="data.html" class="btn btn-primary">Enroll</a>
+            </div>
+            <div class="course-item">
+                <h3>Web Development</h3>
+                <p>This web development course provides comprehensive training in
+                   front-end and back-end web development technologies. </p>
+                <a href="web.html" class="btn btn-primary">Enroll</a>
+            </div>
+            <div class="course-item">
+                <h3>Cloud Computing</h3>
+                <p>This cloud computing course introduces students to the fundamentals of
+                   cloud technologies and services, including AWS, Azure, and Google Cloud.
+                   </p>
+                <a href="cloud.html" class="btn btn-primary">Enroll</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <p>If you have any questions or inquiries, please don't hesitate to contact us:</p>
+            <p>Email: contact@thetechspot.com</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 The Tech Spot Online Course Platform
+    </footer>
+        <script>
+        // Smooth scrolling for menu links
+        document.querySelectorAll('.menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
